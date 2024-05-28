@@ -1,0 +1,23 @@
+body {
+  background-color: #1f1f1f;
+  color: #d7d7d7;
+  font-family: Arial, san-serif;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+button {
+  padding: 5px 15px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: orange;
+  border-width: 2px;
+  color: inherit;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: darkorange;
+  color: #1f1f1f;
+  transition: 0.2s;
+}
