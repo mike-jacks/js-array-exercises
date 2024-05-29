@@ -21,3 +21,7 @@ button:hover {
   color: #1f1f1f;
   transition: 0.2s;
 }
+
+li {
+  list-style-type: none;
+}

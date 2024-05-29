@@ -15,8 +15,7 @@ const loop2 = () => {
     console.log(array[i]);
   }
   array.map((item) => {
-    document.getElementById("unicorn").innerHTML +=
-      "<p>" + `🦄🦄🦄🦄${item}🌈🌈🌈🌈` + "</p>";
+    document.getElementById("unicorn").innerHTML += "<p>" + `🦄🦄🦄🦄${item}🌈🌈🌈🌈` + "</p>";
   });
 };
 
@@ -73,5 +72,96 @@ const map3 = () => {
   // });
   for (let i = 0; i < numbers.length; i++) {
     console.log(`Original: ${old_numbers[i]}, changed: ${numbers[i]}`);
+  }
+};
+
+const testNumberFilter = () => {
+  const nums = [1, 2, 3, 4, 5, 6, 7, 8];
+  const filteredNumbers = numberFilter(nums);
+  console.log(filteredNumbers);
+};
+
+const numberFilter = (numbers) => numbers.filter((number) => number >= 0 && number <= 5);
+
+// const numberFilterForEach = (numbers) => {
+//   const filtered = [];
+//   numbers.forEach((num, index, array) => {
+//     if (!num >= 0 && !num <= 5) {
+//       array.remove(index);
+//     }
+//   });
+//   return numbers;
+// };
+
+// const numberFilter = (numbers) => {
+//   result = [];
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] >= 0 && numbers[i] <= 5) {
+//       result.push(numbers[i]);
+//     }
+//   }
+//   return result;
+// };
+
+// const filter1 = () => {
+//   const numbersString = prompt("Give a list of numbers separated by a comma: ");
+//   const numbers = numbersString.split(",").map((number) => number.trim());
+//   const oddNumbers = [];
+//   for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] % 2 !== 0) {
+//       oddNumbers.push(numbers[i]);
+//     }
+//   }
+//   for (let i = 0; i < oddNumbers.length; i++) {
+//     console.log(oddNumbers[i])
+//   }
+// };
+
+// const filter1 = () => {
+//   const numbersString = prompt("Give a list of numbers separated by a comma: ");
+//   const numbers = numbersString.split(",").map((number) => Number(number));
+//   document.getElementById("filtered-numbers").innerHTML = "";
+//   numbers
+//     .filter((num) => num % 2 !== 0)
+//     .map((num) => {
+//       document.getElementById("filtered-numbers").innerHTML += "<li>" + num + "</li>";
+//     });
+// };
+
+// const filter1 = () => {
+//   const numbersString = prompt("Give a list of numbers separated by a comma: ");
+//   const numbers = numbersString.split(",").map((number) => Number(number));
+//   document.getElementById("filtered-numbers").innerHTML = "";
+//   numbers.forEach((num, index, array) => {
+//     if (num % 2 !== 0) {
+//       document.getElementById("filtered-numbers").innerHTML += `<li>${num}</li>`;
+//     }
+//   });
+// };
+
+// const filter1 = () => {
+//   const numbersString = prompt("Give a list of numbers separated by a comma: ");
+//   const numbers = numbersString.split(",").map((number) => Number(number));
+//   document.getElementById("filtered-numbers").innerHTML = "";
+//   let i = 0;
+//   while (i < numbers.length) {
+//     if (numbers[i] % 2 !== 0) {
+//       document.getElementById("filtered-numbers").innerHTML += `<li>${numbers[i]}</li>`;
+//     }
+//     i++;
+//   }
+// };
+
+const filterModifyArray = () => {
+  const numbers = [0, 2, 76, 8, 2, 1, 5, 2, 6, 9, 9, 11, 0, 15, 2, 8, 9];
+  filter2(numbers);
+  console.log(numbers);
+};
+
+const filter2 = (numbers) => {
+  for (let i = numbers.length - 1; i >= 0; i--) {
+    if (numbers[i] < 8 || numbers[i] > 15) {
+      numbers.splice(i, 1);
+    }
   }
 };
