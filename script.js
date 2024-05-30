@@ -139,18 +139,18 @@ const numberFilter = (numbers) => numbers.filter((number) => number >= 0 && numb
 //   });
 // };
 
-// const filter1 = () => {
-//   const numbersString = prompt("Give a list of numbers separated by a comma: ");
-//   const numbers = numbersString.split(",").map((number) => Number(number));
-//   document.getElementById("filtered-numbers").innerHTML = "";
-//   let i = 0;
-//   while (i < numbers.length) {
-//     if (numbers[i] % 2 !== 0) {
-//       document.getElementById("filtered-numbers").innerHTML += `<li>${numbers[i]}</li>`;
-//     }
-//     i++;
-//   }
-// };
+const filter1 = () => {
+  const numbersString = prompt("Give a list of numbers separated by a comma: ");
+  const numbers = numbersString.split(",").map((number) => Number(number));
+  document.getElementById("filtered-numbers").innerHTML = "";
+  let i = 0;
+  while (i < numbers.length) {
+    if (numbers[i] % 2 !== 0) {
+      document.getElementById("filtered-numbers").innerHTML += `<li>${numbers[i]}</li>`;
+    }
+    i++;
+  }
+};
 
 const filterModifyArray = () => {
   const numbers = [0, 2, 76, 8, 2, 1, 5, 2, 6, 9, 9, 11, 0, 15, 2, 8, 9];
@@ -164,4 +164,20 @@ const filter2 = (numbers) => {
       numbers.splice(i, 1);
     }
   }
+};
+
+const filter3 = () => {
+  const numArray = [0, 1, 2, 3, 4, 5, 6, 7, 8];
+  const odds = numArray.filter((num) => num % 2 !== 0);
+  console.log(odds);
+};
+
+const reduce1 = () => {
+  const numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  const result = numArray.reduce((acc, curr) => {
+    acc += curr;
+    return acc;
+  });
+  console.log(result);
+  return result;
 };
